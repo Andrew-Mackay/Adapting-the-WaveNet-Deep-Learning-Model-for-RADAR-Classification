@@ -80,3 +80,6 @@ target/
 
 # Mac OS-specific storage files
 .DS_Store
+
+# Temporary until decide what to track
+ReproducingPreviousWork
