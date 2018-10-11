@@ -74,6 +74,8 @@ target/
 
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
+/*/.ipynb_checkpoints
+/ReproducingPreviousWork/**/ipynb_checkpoints
 
 # exclude data from source control by default
 /data/
@@ -82,4 +84,10 @@ target/
 .DS_Store
 
 # Temporary until decide what to track
-ReproducingPreviousWork
+#ReproducingPreviousWork
+/ReproducingPreviousWork/**/data_batch*
+/ReproducingPreviousWork/**/test_batch*
+/ReproducingPreviousWork/**/*.rar
+/ReproducingPreviousWork/**/results
+/ReproducingPreviousWork/**/*.py*
+/ReproducingPreviousWork/**/*.meta
