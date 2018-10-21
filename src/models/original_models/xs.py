@@ -4,8 +4,7 @@ from keras.layers import Convolution2D, MaxPooling2D, ZeroPadding2D
 
 
 def make_model(img_rows, img_cols, nb_classes):
-    # Updated to use new version of keras
-    model = Sequential()
+    model = Sequential(name="64-128")
 
     model.add(Convolution2D(64, (5, 5), padding='same', input_shape=(1, img_rows, img_cols), activation='relu'))
     model.add(Convolution2D(64, (5, 5), activation='relu'))

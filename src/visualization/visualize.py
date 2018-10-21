@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 
 
 def visualize(history):
-    plot_loss(history)
-    plot_acc(history)
+    plot_train_test_loss(history)
+    plot_train_test_acc(history)
 
 
-def plot_loss(history):
+def plot_train_test_loss(history):
     # Get training and test loss histories
     training_loss = history.history['loss']
     test_loss = history.history['val_loss']
@@ -24,7 +24,7 @@ def plot_loss(history):
     plt.show()
 
 
-def plot_acc(history):
+def plot_train_test_acc(history):
     # Get training and test loss histories
     training_acc = history.history['acc']
     test_acc = history.history['val_acc']
@@ -40,3 +40,30 @@ def plot_acc(history):
     plt.ylabel('Accuracy')
     plt.title('model accuracy')
     plt.show()
+
+
+def plot_all_train_acc(histories):
+    for key, value in histories.items():
+        plt.plot(value.history['acc'])
+    plt.legend(histories.keys())
+    plt.xlabel('Epoch')
+    plt.ylabel('Train Accuracy')
+    plt.title('Model Train Accuracy')
+    plt.show()
+
+
+def plot_all_test_acc(histories):
+    for key, value in histories.items():
+        plt.plot(value.history['val_acc'])
+
+
+def plot_all_train_loss(histories):
+    for key, value in histories.items():
+        plt.plot(value.history['loss'])
+
+
+def plot_all_test_loss(histories):
+    for key, value in histories.items():
+        plt.plot(value.history['val_loss'])
+
+

@@ -4,8 +4,8 @@ from keras.layers import Convolution2D, MaxPooling2D
 
 
 def make_model(version, img_rows, img_cols, nb_classes):
-    model = Sequential()
     if version == 1:
+        model = Sequential(name="dense")
         model.add(Convolution2D(16, (3, 3), padding='same', input_shape=(1, img_rows, img_cols), activation='relu'))
         model.add(Convolution2D(16, (3, 3), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -19,6 +19,7 @@ def make_model(version, img_rows, img_cols, nb_classes):
         model.add(Dropout(0.5))
 
     elif version == 2:
+        model = Sequential(name="no-dense")
         model.add(Convolution2D(32, (3, 3), padding='same', input_shape=(1, img_rows, img_cols), activation='relu'))
         model.add(Convolution2D(32, (3, 3), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -30,11 +31,13 @@ def make_model(version, img_rows, img_cols, nb_classes):
         model.add(Flatten())
 
     elif version == 3:
+        model = Sequential(name="simplest")
         model.add(Convolution2D(32, (3, 3), padding='same', input_shape=(1, img_rows, img_cols), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Flatten())
 
     elif version == 4:
+        model = Sequential(name="medium")
         model.add(Convolution2D(32, (3, 3), padding='same', input_shape=(1, img_rows, img_cols), activation='relu'))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Convolution2D(64, (3, 3), padding='same', activation='relu'))
