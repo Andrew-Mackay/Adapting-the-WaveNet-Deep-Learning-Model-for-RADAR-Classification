@@ -1,0 +1,132 @@
+--------------------------------------------------
+Model Name: 2-4
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.90      1.00      0.95      1017
+ArmSlowerTowards       0.99      0.94      0.97      1017
+     CirclingArm       1.00      0.90      0.95      1017
+        Clapping       0.95      1.00      0.97      1017
+       PickingUp       1.00      0.96      0.98      1017
+         Sitting       0.97      1.00      0.99      1017
+         Walking       1.00      1.00      1.00      1017
+
+     avg / total       0.97      0.97      0.97      7119
+Confusion Matrix:
+[[1017    0    0    0    0    0    0]
+ [  57  960    0    0    0    0    0]
+ [  37    5  919   56    0    0    0]
+ [   0    0    0 1017    0    0    0]
+ [  15    0    0    0  975   27    0]
+ [   0    0    0    0    1 1016    0]
+ [   0    0    0    0    0    0 1017]]
+--------------------------------------------------
+Model Name: 4-8
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.95      1.00      0.97      1017
+ArmSlowerTowards       1.00      0.95      0.98      1017
+     CirclingArm       0.99      0.93      0.96      1017
+        Clapping       0.94      1.00      0.97      1017
+       PickingUp       1.00      0.98      0.99      1017
+         Sitting       0.99      1.00      1.00      1017
+         Walking       1.00      1.00      1.00      1017
+
+     avg / total       0.98      0.98      0.98      7119
+Confusion Matrix:
+[[1014    0    3    0    0    0    0]
+ [  42  971    4    0    0    0    0]
+ [   8    0  945   64    0    0    0]
+ [   0    0    0 1017    0    0    0]
+ [   9    2    0    0  999    7    0]
+ [   0    0    0    0    0 1017    0]
+ [   0    0    0    0    0    0 1017]]
+--------------------------------------------------
+Model Name: 8-16
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.97      0.98      0.98      1017
+ArmSlowerTowards       0.99      0.98      0.99      1017
+     CirclingArm       0.99      0.96      0.97      1017
+        Clapping       0.96      1.00      0.98      1017
+       PickingUp       1.00      0.99      1.00      1017
+         Sitting       1.00      1.00      1.00      1017
+         Walking       1.00      1.00      1.00      1017
+
+     avg / total       0.99      0.99      0.99      7119
+Confusion Matrix:
+[[ 995   12   10    0    0    0    0]
+ [  17 1000    0    0    0    0    0]
+ [   3    0  973   41    0    0    0]
+ [   0    0    0 1017    0    0    0]
+ [   6    0    0    0 1011    0    0]
+ [   0    0    0    0    0 1017    0]
+ [   0    0    0    0    0    0 1017]]
+--------------------------------------------------
+Model Name: 16-32
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.95      1.00      0.97      1017
+ArmSlowerTowards       1.00      0.97      0.98      1017
+     CirclingArm       1.00      0.95      0.97      1017
+        Clapping       0.97      1.00      0.98      1017
+       PickingUp       1.00      0.98      0.99      1017
+         Sitting       0.99      1.00      1.00      1017
+         Walking       1.00      1.00      1.00      1017
+
+     avg / total       0.99      0.99      0.99      7119
+Confusion Matrix:
+[[1016    0    0    0    1    0    0]
+ [  35  982    0    0    0    0    0]
+ [  18    4  964   31    0    0    0]
+ [   0    0    0 1017    0    0    0]
+ [   6    0    0    0 1001   10    0]
+ [   0    0    0    0    0 1017    0]
+ [   0    0    0    0    0    0 1017]]
+--------------------------------------------------
+Model Name: 32-64
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.98      0.99      0.98      1017
+ArmSlowerTowards       1.00      0.99      0.99      1017
+     CirclingArm       0.99      0.95      0.97      1017
+        Clapping       0.95      1.00      0.98      1017
+       PickingUp       1.00      0.98      0.99      1017
+         Sitting       0.99      1.00      1.00      1017
+         Walking       1.00      1.00      1.00      1017
+
+     avg / total       0.99      0.99      0.99      7119
+Confusion Matrix:
+[[1006    4    7    0    0    0    0]
+ [  12 1004    1    0    0    0    0]
+ [   3    0  965   49    0    0    0]
+ [   0    0    0 1017    0    0    0]
+ [   9    0    0    0 1001    7    0]
+ [   0    0    0    0    0 1017    0]
+ [   0    0    0    0    0    0 1017]]
+--------------------------------------------------
+Model Name: 64-128
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.97      0.99      0.98      1017
+ArmSlowerTowards       1.00      0.98      0.99      1017
+     CirclingArm       0.99      0.94      0.97      1017
+        Clapping       0.96      1.00      0.98      1017
+       PickingUp       0.98      1.00      0.99      1017
+         Sitting       1.00      0.99      0.99      1017
+         Walking       1.00      1.00      1.00      1017
+
+     avg / total       0.99      0.99      0.99      7119
+Confusion Matrix:
+[[1005    5    3    0    4    0    0]
+ [  15  999    3    0    0    0    0]
+ [  15    0  958   39    5    0    0]
+ [   0    0    0 1017    0    0    0]
+ [   0    0    0    0 1017    0    0]
+ [   0    0    0    0   14 1003    0]
+ [   0    0    0    0    0    0 1017]]

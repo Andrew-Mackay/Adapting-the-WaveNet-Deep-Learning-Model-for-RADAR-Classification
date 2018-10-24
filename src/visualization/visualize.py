@@ -1,6 +1,46 @@
 import matplotlib.pyplot as plt
 
 
+def plot_train_acc(history, title, save=False, path=""):
+    acc = history.history['acc']
+    epochs = range(1, len(acc)+1)
+    plt.plot(epochs, acc)
+    plt.xticks(epochs)
+    plt.xlabel('Epoch')
+    plt.ylabel('Train Accuracy')
+    plt.title(title)
+    if save:
+        plt.savefig(path, format='svg', dpi=1200)
+    plt.show()
+
+
+def plot_train_loss(history, title, save=False, path=""):
+    loss = history.history['loss']
+    epochs = range(1, len(loss)+1)
+    plt.plot(epochs, loss)
+    plt.xticks(epochs)
+    plt.xlabel('Epoch')
+    plt.ylabel('Train Loss')
+    plt.title(title)
+    if save:
+        plt.savefig(path, format='svg', dpi=1200)
+    plt.show()
+
+
+def plot_evaluation_bar(dictionary, labels, title, x_label, y_label, metric="accuracy", save=False, path=""):
+    heights = []
+    for key, value in dictionary.items():
+        heights.append(value[metric])
+    plt.bar(range(len(dictionary.keys())), heights)
+    plt.xticks(range(len(labels)), labels)
+    plt.xlabel(x_label)
+    plt.ylabel(y_label)
+    plt.title(title)
+    if save:
+        plt.savefig(path, format='svg', dpi=1200)
+    plt.show()
+
+
 def visualize(history):
     plot_train_test_loss(history)
     plot_train_test_acc(history)
@@ -50,20 +90,3 @@ def plot_all_train_acc(histories):
     plt.ylabel('Train Accuracy')
     plt.title('Model Train Accuracy')
     plt.show()
-
-
-def plot_all_test_acc(histories):
-    for key, value in histories.items():
-        plt.plot(value.history['val_acc'])
-
-
-def plot_all_train_loss(histories):
-    for key, value in histories.items():
-        plt.plot(value.history['loss'])
-
-
-def plot_all_test_loss(histories):
-    for key, value in histories.items():
-        plt.plot(value.history['val_loss'])
-
-
