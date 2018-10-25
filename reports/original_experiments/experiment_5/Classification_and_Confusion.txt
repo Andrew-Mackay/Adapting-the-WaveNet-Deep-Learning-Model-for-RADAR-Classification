@@ -1,0 +1,96 @@
+--------------------------------------------------
+Test set name: 1s
+Accuracy: 0.57
+Loss: 6.92
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       1.00      0.17      0.29       992
+ArmSlowerTowards       0.50      0.35      0.41       992
+     CirclingArm       0.30      0.55      0.39       992
+        Clapping       0.91      0.15      0.26       992
+       PickingUp       0.62      0.93      0.74       992
+         Sitting       0.55      0.94      0.69       992
+         Walking       0.99      0.88      0.93       992
+
+     avg / total       0.69      0.57      0.53      6944
+Confusion Matrix:
+[[165  35 169   5 124 494   0]
+ [  0 349 309   0 258  76   0]
+ [  0 289 547   0  90  60   6]
+ [  0   0 808 148  36   0   0]
+ [  0   1   0   0 921  70   0]
+ [  0  29   2   0  28 933   0]
+ [  0   0   0  10  37  72 873]]
+--------------------------------------------------
+Test set name: 1_5s
+Accuracy: 0.58
+Loss: 6.75
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       1.00      0.17      0.30       992
+ArmSlowerTowards       0.72      0.32      0.44       992
+     CirclingArm       0.28      0.66      0.39       992
+        Clapping       0.82      0.05      0.09       992
+       PickingUp       0.59      0.97      0.73       992
+         Sitting       0.69      0.98      0.81       992
+         Walking       1.00      0.90      0.95       992
+
+     avg / total       0.73      0.58      0.53      6944
+Confusion Matrix:
+[[173  15 314   0 135 355   0]
+ [  0 316 426   0 237  13   0]
+ [  0  94 656   0 242   0   0]
+ [  0   7 936  49   0   0   0]
+ [  0   2   0   0 965  25   0]
+ [  0   4   0   0  19 969   0]
+ [  0   0   0  11  51  39 891]]
+--------------------------------------------------
+Test set name: 2s
+Accuracy: 0.6
+Loss: 6.46
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       1.00      0.11      0.20       992
+ArmSlowerTowards       0.84      0.37      0.51       992
+     CirclingArm       0.27      0.76      0.40       992
+        Clapping       0.00      0.00      0.00       992
+       PickingUp       0.64      0.99      0.78       992
+         Sitting       0.84      0.99      0.91       992
+         Walking       1.00      0.95      0.98       992
+
+     avg / total       0.66      0.60      0.54      6944
+Confusion Matrix:
+[[110   3 602   0 100 177   0]
+ [  0 363 392   0 237   0   0]
+ [  0  66 752   0 174   0   0]
+ [  0   0 992   0   0   0   0]
+ [  0   1   0   0 986   5   0]
+ [  0   0   0   0   6 986   0]
+ [  0   0   0  10  31   6 945]]
+--------------------------------------------------
+Test set name: noninitialised_A
+Accuracy: 0.83
+Loss: 2.71
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       1.00      0.16      0.27       992
+ArmSlowerTowards       1.00      0.68      0.81       992
+     CirclingArm       0.47      1.00      0.64       992
+        Clapping       0.97      1.00      0.99       992
+       PickingUp       0.99      1.00      1.00       992
+         Sitting       0.99      1.00      0.99       992
+         Walking       1.00      0.97      0.99       992
+
+     avg / total       0.92      0.83      0.81      6944
+Confusion Matrix:
+[[156   0 826   0   0  10   0]
+ [  0 675 312   0   5   0   0]
+ [  0   0 992   0   0   0   0]
+ [  0   0   0 992   0   0   0]
+ [  0   0   0   0 992   0   0]
+ [  0   0   0   0   0 992   0]
+ [  0   0   0  28   0   0 964]]

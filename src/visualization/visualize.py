@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 
 
 def plot_train_acc(history, title, save=False, path=""):
+    """Plot the training accuracy over epochs"""
     acc = history.history['acc']
     epochs = range(1, len(acc)+1)
     plt.plot(epochs, acc)
@@ -15,6 +16,7 @@ def plot_train_acc(history, title, save=False, path=""):
 
 
 def plot_train_loss(history, title, save=False, path=""):
+    """Plot the training loss over epochs"""
     loss = history.history['loss']
     epochs = range(1, len(loss)+1)
     plt.plot(epochs, loss)
@@ -28,6 +30,7 @@ def plot_train_loss(history, title, save=False, path=""):
 
 
 def plot_evaluation_bar(dictionary, labels, title, x_label, y_label, metric="accuracy", save=False, path=""):
+    """Compare test accuracy or loss in the form of a bar chart"""
     heights = []
     for key, value in dictionary.items():
         heights.append(value[metric])

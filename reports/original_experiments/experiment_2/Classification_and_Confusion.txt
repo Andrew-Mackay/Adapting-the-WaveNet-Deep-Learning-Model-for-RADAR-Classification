@@ -3,64 +3,64 @@ Model Name: 2-4
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.00      0.00      0.00      1017
-ArmSlowerTowards       0.00      0.00      0.00      1017
-     CirclingArm       0.00      0.00      0.00      1017
-        Clapping       0.00      0.00      0.00      1017
-       PickingUp       0.00      0.00      0.00      1017
-         Sitting       0.00      0.00      0.00      1017
-         Walking       0.14      1.00      0.25      1017
+ArmFasterTowards       0.96      0.97      0.96      1017
+ArmSlowerTowards       0.98      0.94      0.96      1017
+     CirclingArm       0.96      0.96      0.96      1017
+        Clapping       0.96      1.00      0.98      1017
+       PickingUp       1.00      0.98      0.99      1017
+         Sitting       0.98      1.00      0.99      1017
+         Walking       1.00      1.00      1.00      1017
 
-     avg / total       0.02      0.14      0.04      7119
+     avg / total       0.98      0.98      0.98      7119
 Confusion Matrix:
-[[   0    0    0    0    0    0 1017]
- [   0    0    0    0    0    0 1017]
- [   0    0    0    0    0    0 1017]
- [   0    0    0    0    0    0 1017]
- [   0    0    0    0    0    0 1017]
- [   0    0    0    0    0    0 1017]
- [   0    0    0    0    0    0 1017]]
+[[ 984   16   14    0    3    0    0]
+ [  38  957   22    0    0    0    0]
+ [   0    0  973   44    0    0    0]
+ [   0    0    0 1017    0    0    0]
+ [   4    0    0    0 1000   13    0]
+ [   0    0    0    0    0 1017    0]
+ [   0    0    0    0    0    5 1012]]
 --------------------------------------------------
 Model Name: 8-16
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.95      1.00      0.97      1017
-ArmSlowerTowards       0.99      0.97      0.98      1017
-     CirclingArm       1.00      0.94      0.97      1017
-        Clapping       0.96      1.00      0.98      1017
-       PickingUp       1.00      0.97      0.99      1017
-         Sitting       0.99      1.00      0.99      1017
+ArmFasterTowards       0.97      0.99      0.98      1017
+ArmSlowerTowards       0.99      0.98      0.99      1017
+     CirclingArm       0.99      0.91      0.95      1017
+        Clapping       0.92      1.00      0.96      1017
+       PickingUp       1.00      0.99      1.00      1017
+         Sitting       1.00      1.00      1.00      1017
          Walking       1.00      1.00      1.00      1017
 
      avg / total       0.98      0.98      0.98      7119
 Confusion Matrix:
-[[1013    2    2    0    0    0    0]
- [  32  985    0    0    0    0    0]
- [   9    5  959   44    0    0    0]
+[[1011    2    4    0    0    0    0]
+ [  20  993    4    0    0    0    0]
+ [   1    4  924   88    0    0    0]
  [   0    0    0 1017    0    0    0]
- [  13    2    0    0  990   12    0]
- [   0    0    0    0    0 1017    0]
+ [   7    0    0    0 1010    0    0]
+ [   0    0    0    0    3 1014    0]
  [   0    0    0    0    0    0 1017]]
 --------------------------------------------------
 Model Name: 32-64
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.95      0.99      0.97      1017
-ArmSlowerTowards       1.00      0.96      0.98      1017
-     CirclingArm       0.99      0.92      0.96      1017
-        Clapping       0.93      1.00      0.97      1017
-       PickingUp       1.00      0.99      0.99      1017
+ArmFasterTowards       0.99      0.96      0.98      1017
+ArmSlowerTowards       0.98      1.00      0.99      1017
+     CirclingArm       0.98      0.94      0.96      1017
+        Clapping       0.95      1.00      0.97      1017
+       PickingUp       1.00      1.00      1.00      1017
          Sitting       1.00      1.00      1.00      1017
          Walking       1.00      1.00      1.00      1017
 
      avg / total       0.98      0.98      0.98      7119
 Confusion Matrix:
-[[1011    0    6    0    0    0    0]
- [  44  972    1    0    0    0    0]
- [   4    1  939   73    0    0    0]
+[[ 975   18   24    0    0    0    0]
+ [   2 1015    0    0    0    0    0]
+ [   3    2  957   55    0    0    0]
  [   0    0    0 1017    0    0    0]
- [  10    0    0    0 1007    0    0]
- [   0    0    0    0    4 1013    0]
+ [   0    0    0    0 1013    4    0]
+ [   0    0    0    0    2 1015    0]
  [   0    0    0    0    0    0 1017]]

@@ -1,0 +1,88 @@
+--------------------------------------------------
+Data Name: noninitialised_A
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       1.00      1.00      1.00       992
+ArmSlowerTowards       1.00      1.00      1.00       992
+     CirclingArm       1.00      1.00      1.00       992
+        Clapping       1.00      1.00      1.00       992
+       PickingUp       1.00      1.00      1.00       992
+         Sitting       1.00      1.00      1.00       992
+         Walking       1.00      1.00      1.00       992
+
+     avg / total       1.00      1.00      1.00      6944
+Confusion Matrix:
+[[992   0   0   0   0   0   0]
+ [  0 992   0   0   0   0   0]
+ [  0   0 992   0   0   0   0]
+ [  0   0   0 992   0   0   0]
+ [  3   1   0   0 988   0   0]
+ [  0   0   0   0   0 992   0]
+ [  0   0   0   0   0   0 992]]
+--------------------------------------------------
+Data Name: noninitialised_B
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.55      0.99      0.70       992
+ArmSlowerTowards       0.82      0.82      0.82       992
+     CirclingArm       0.76      0.26      0.39       992
+        Clapping       1.00      0.98      0.99       992
+       PickingUp       1.00      0.02      0.03       992
+         Sitting       0.54      1.00      0.70       992
+         Walking       1.00      1.00      1.00       992
+
+     avg / total       0.81      0.72      0.66      6944
+Confusion Matrix:
+[[980  12   0   0   0   0   0]
+ [181 810   1   0   0   0   0]
+ [595 137 259   0   0   1   0]
+ [ 10   2  10 970   0   0   0]
+ [ 28  22  73   0  15 853   1]
+ [  0   0   0   0   0 992   0]
+ [  0   0   0   0   0   0 992]]
+--------------------------------------------------
+Data Name: noninitialised_C
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.97      0.78      0.86       992
+ArmSlowerTowards       1.00      1.00      1.00       992
+     CirclingArm       0.93      1.00      0.96       992
+        Clapping       1.00      0.97      0.99       992
+       PickingUp       0.85      0.98      0.91       992
+         Sitting       1.00      1.00      1.00       992
+         Walking       1.00      1.00      1.00       992
+
+     avg / total       0.96      0.96      0.96      6944
+Confusion Matrix:
+[[770   0  50   0 172   0   0]
+ [  0 992   0   0   0   0   0]
+ [  0   0 992   0   0   0   0]
+ [  5   0  23 964   0   0   0]
+ [ 17   0   0   0 975   0   0]
+ [  2   0   0   0   0 990   0]
+ [  0   0   0   0   0   0 992]]
+--------------------------------------------------
+Data Name: noninitialised_D
+Classification Report:
+                  precision    recall  f1-score   support
+
+ArmFasterTowards       0.74      0.85      0.79       992
+ArmSlowerTowards       0.83      0.80      0.82       992
+     CirclingArm       0.76      0.61      0.68       992
+        Clapping       0.88      1.00      0.94       992
+       PickingUp       0.96      0.97      0.96       992
+         Sitting       1.00      0.95      0.98       992
+         Walking       1.00      1.00      1.00       992
+
+     avg / total       0.88      0.88      0.88      6944
+Confusion Matrix:
+[[839 143   5   0   5   0   0]
+ [  0 795 185  12   0   0   0]
+ [271   0 604 117   0   0   0]
+ [  0   0   0 992   0   0   0]
+ [ 17  10   0   0 964   1   0]
+ [  0   5   0   0  40 945   2]
+ [  0   0   0   0   0   0 992]]

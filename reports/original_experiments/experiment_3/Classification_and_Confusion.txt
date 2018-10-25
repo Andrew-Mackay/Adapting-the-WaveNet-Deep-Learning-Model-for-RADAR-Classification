@@ -1,88 +1,88 @@
 --------------------------------------------------
 Test set name: mixed_angle_A
-Accuracy: 0.56
-Loss: 7.01
+Accuracy: 0.17
+Loss: 13.45
 Classification Report:
                   precision    recall  f1-score   support
 
 ArmFasterTowards       0.00      0.00      0.00      1449
-ArmSlowerTowards       0.98      0.13      0.22      1448
-     CirclingArm       0.44      0.31      0.37      1447
-        Clapping       1.00      1.00      1.00      1448
-       PickingUp       0.31      0.97      0.47      1449
-         Sitting       0.96      0.98      0.97      1449
+ArmSlowerTowards       0.00      0.00      0.00      1448
+     CirclingArm       0.00      0.00      0.00      1447
+        Clapping       0.00      0.00      0.00      1448
+       PickingUp       0.00      0.00      0.00      1449
+         Sitting       0.17      1.00      0.29      1449
 
-     avg / total       0.61      0.56      0.50      8690
+     avg / total       0.03      0.17      0.05      8690
 Confusion Matrix:
-[[   0    0   92    0 1344   13]
- [   0  182  466    0  800    0]
- [   0    0  454    0  993    0]
- [   0    0    0 1448    0    0]
- [   0    0    0    0 1409   40]
- [   0    4   24    0    6 1415]]
+[[   0    0    0    0    0 1449]
+ [   0    0    0    0    0 1448]
+ [   0    0    0    0    0 1447]
+ [   0    0    0    0    0 1448]
+ [   0    0    0    0    0 1449]
+ [   0    0    0    0    0 1449]]
 --------------------------------------------------
 Test set name: cifar_30deg
-Accuracy: 0.64
-Loss: 5.79
+Accuracy: 0.17
+Loss: 13.43
 Classification Report:
                   precision    recall  f1-score   support
 
 ArmFasterTowards       0.00      0.00      0.00      1142
-ArmSlowerTowards       0.99      0.24      0.39      1142
-     CirclingArm       0.58      0.62      0.60      1142
-        Clapping       1.00      1.00      1.00      1142
-       PickingUp       0.37      0.98      0.53      1142
-         Sitting       0.97      1.00      0.99      1142
+ArmSlowerTowards       0.00      0.00      0.00      1142
+     CirclingArm       0.00      0.00      0.00      1142
+        Clapping       0.00      0.00      0.00      1142
+       PickingUp       0.00      0.00      0.00      1142
+         Sitting       0.17      1.00      0.29      1142
 
-     avg / total       0.65      0.64      0.58      6852
+     avg / total       0.03      0.17      0.05      6852
 Confusion Matrix:
-[[   0    0   74    0 1063    5]
- [   0  274  444    0  424    0]
- [   0    2  708    0  432    0]
- [   0    0    0 1142    0    0]
- [   0    0    0    0 1115   27]
+[[   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
  [   0    0    0    0    0 1142]]
 --------------------------------------------------
 Test set name: cifar_45deg
-Accuracy: 0.48
-Loss: 8.41
+Accuracy: 0.17
+Loss: 13.46
 Classification Report:
                   precision    recall  f1-score   support
 
 ArmFasterTowards       0.00      0.00      0.00      1142
 ArmSlowerTowards       0.00      0.00      0.00      1142
      CirclingArm       0.00      0.00      0.00      1142
-        Clapping       1.00      1.00      1.00      1142
-       PickingUp       0.26      0.90      0.40      1142
-         Sitting       0.90      0.97      0.93      1142
+        Clapping       0.00      0.00      0.00      1142
+       PickingUp       0.00      0.00      0.00      1142
+         Sitting       0.17      1.00      0.29      1142
 
-     avg / total       0.36      0.48      0.39      6852
+     avg / total       0.03      0.17      0.05      6852
 Confusion Matrix:
-[[   0    0   35    0 1101    6]
- [   0    0  436    0  706    0]
- [   0    0    0    0 1142    0]
- [   0    0    0 1142    0    0]
- [   0    0    0    0 1026  116]
- [   0    2   24    0    7 1109]]
+[[   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]]
 --------------------------------------------------
 Test set name: cifar_60deg
-Accuracy: 0.47
-Loss: 8.48
+Accuracy: 0.17
+Loss: 13.43
 Classification Report:
                   precision    recall  f1-score   support
 
 ArmFasterTowards       0.00      0.00      0.00      1142
 ArmSlowerTowards       0.00      0.00      0.00      1142
      CirclingArm       0.00      0.00      0.00      1142
-        Clapping       1.00      1.00      1.00      1142
-       PickingUp       0.23      0.88      0.36      1142
-         Sitting       0.88      0.96      0.92      1142
+        Clapping       0.00      0.00      0.00      1142
+       PickingUp       0.00      0.00      0.00      1142
+         Sitting       0.17      1.00      0.29      1142
 
-     avg / total       0.35      0.47      0.38      6852
+     avg / total       0.03      0.17      0.05      6852
 Confusion Matrix:
-[[   0    0   49    0 1085    8]
- [   0    0   36    0 1106    0]
- [   0    0    0    0 1142    0]
- [   0    0    0 1142    0    0]
- [   0    0    0    0 1004  138]
- [   0   18    0    0   27 1097]]
+[[   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]
+ [   0    0    0    0    0 1142]]
