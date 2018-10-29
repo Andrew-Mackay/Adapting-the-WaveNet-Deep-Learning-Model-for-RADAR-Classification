@@ -3,42 +3,46 @@ Data Name: mixed
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.86      0.97      0.91      1587
-ArmSlowerTowards       0.97      0.89      0.93      1587
-     CirclingArm       0.98      0.88      0.93      1587
-        Clapping       0.97      1.00      0.98      1587
-       PickingUp       0.96      0.98      0.97      1587
-         Sitting       0.98      0.99      0.99      1587
+ArmFasterTowards       1.00      1.00      1.00      1587
+ArmSlowerTowards       1.00      1.00      1.00      1587
+     CirclingArm       1.00      0.98      0.99      1587
+        Clapping       0.98      1.00      0.99      1587
+       PickingUp       0.99      1.00      1.00      1587
+         Sitting       1.00      0.99      1.00      1587
          Walking       1.00      1.00      1.00      1017
 
-     avg / total       0.96      0.96      0.96     10539
+       micro avg       1.00      1.00      1.00     10539
+       macro avg       1.00      1.00      1.00     10539
+    weighted avg       1.00      1.00      1.00     10539
 Confusion Matrix:
-[[1539   24   15    0    9    0    0]
- [ 160 1410   11    0    6    0    0]
- [  91   10 1403   49   30    0    4]
+[[1587    0    0    0    0    0    0]
+ [   0 1587    0    0    0    0    0]
+ [   0    0 1552   35    0    0    0]
  [   0    0    0 1587    0    0    0]
- [   3    6    1    0 1554   23    0]
- [   5    0    0    0   17 1564    1]
- [   0    0    0    0    0    1 1016]]
+ [   0    1    0    0 1586    0    0]
+ [   0    0    0    0   10 1577    0]
+ [   0    0    0    0    0    0 1017]]
 --------------------------------------------------
 Data Name: mixed_angle_A
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.56      0.36      0.44      1449
-ArmSlowerTowards       0.58      0.90      0.70      1448
-     CirclingArm       0.85      0.58      0.69      1447
+ArmFasterTowards       0.81      0.93      0.87      1449
+ArmSlowerTowards       0.91      0.74      0.82      1448
+     CirclingArm       0.95      0.80      0.87      1447
         Clapping       1.00      1.00      1.00      1448
-       PickingUp       0.91      0.75      0.82      1449
-         Sitting       0.68      0.67      0.67      1449
+       PickingUp       0.86      0.88      0.87      1449
+         Sitting       0.78      0.67      0.72      1449
          Walking       0.00      0.00      0.00         0
 
-     avg / total       0.76      0.71      0.72      8690
+       micro avg       0.84      0.84      0.84      8690
+       macro avg       0.76      0.72      0.73      8690
+    weighted avg       0.89      0.84      0.86      8690
 Confusion Matrix:
-[[ 519  643   52    0   19  216    0]
- [  18 1297   88    0   41    4    0]
- [ 288  266  844    0   45    4    0]
+[[1350   45   23    0   25    6    0]
+ [ 253 1077   40    0   13   65    0]
+ [  48   55 1163    0  164   17    0]
  [   0    0    0 1448    0    0    0]
- [  97   33    0    0 1081  238    0]
- [   0   11    4    0    4  967  463]
+ [   0    0    0    0 1269  180    0]
+ [  16    4    1    0    0  966  462]
  [   0    0    0    0    0    0    0]]

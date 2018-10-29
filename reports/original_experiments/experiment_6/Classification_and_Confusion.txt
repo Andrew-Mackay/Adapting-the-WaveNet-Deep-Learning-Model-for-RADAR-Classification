@@ -3,21 +3,23 @@ Data Name: noninitialised_A
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.99      1.00      0.99       992
-ArmSlowerTowards       0.99      1.00      1.00       992
+ArmFasterTowards       1.00      1.00      1.00       992
+ArmSlowerTowards       1.00      1.00      1.00       992
      CirclingArm       1.00      1.00      1.00       992
         Clapping       1.00      1.00      1.00       992
-       PickingUp       1.00      0.99      0.99       992
+       PickingUp       1.00      1.00      1.00       992
          Sitting       1.00      1.00      1.00       992
          Walking       1.00      1.00      1.00       992
 
-     avg / total       1.00      1.00      1.00      6944
+       micro avg       1.00      1.00      1.00      6944
+       macro avg       1.00      1.00      1.00      6944
+    weighted avg       1.00      1.00      1.00      6944
 Confusion Matrix:
 [[992   0   0   0   0   0   0]
  [  0 992   0   0   0   0   0]
- [  0   4 988   0   0   0   0]
+ [  0   0 992   0   0   0   0]
  [  0   0   0 992   0   0   0]
- [ 12   2   0   0 978   0   0]
+ [  0   0   0   0 992   0   0]
  [  0   0   0   0   0 992   0]
  [  0   0   0   0   0   0 992]]
 --------------------------------------------------
@@ -25,21 +27,23 @@ Data Name: noninitialised_B
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.50      0.99      0.66       992
-ArmSlowerTowards       0.97      0.75      0.84       992
-     CirclingArm       0.64      0.24      0.35       992
-        Clapping       1.00      0.98      0.99       992
-       PickingUp       0.91      0.01      0.02       992
-         Sitting       0.55      1.00      0.71       992
-         Walking       0.96      1.00      0.98       992
+ArmFasterTowards       0.57      1.00      0.72       992
+ArmSlowerTowards       0.90      0.77      0.83       992
+     CirclingArm       0.78      0.36      0.49       992
+        Clapping       1.00      0.99      0.99       992
+       PickingUp       0.67      0.04      0.08       992
+         Sitting       0.54      1.00      0.70       992
+         Walking       1.00      1.00      1.00       992
 
-     avg / total       0.79      0.71      0.65      6944
+       micro avg       0.74      0.74      0.74      6944
+       macro avg       0.78      0.74      0.69      6944
+    weighted avg       0.78      0.74      0.69      6944
 Confusion Matrix:
-[[983   2   0   0   0   7   0]
- [230 741  21   0   0   0   0]
- [726  20 243   0   0   3   0]
- [ 12   1   5 973   1   0   0]
- [ 21   2 112   0  10 803  44]
+[[992   0   0   0   0   0   0]
+ [224 768   0   0   0   0   0]
+ [533  83 354   0  22   0   0]
+ [  0   0  10 982   0   0   0]
+ [  4   0  88   0  44 856   0]
  [  0   0   0   0   0 992   0]
  [  0   0   0   0   0   0 992]]
 --------------------------------------------------
@@ -47,42 +51,46 @@ Data Name: noninitialised_C
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.94      0.73      0.82       992
-ArmSlowerTowards       0.97      1.00      0.98       992
-     CirclingArm       0.88      1.00      0.94       992
-        Clapping       1.00      0.94      0.97       992
-       PickingUp       0.85      0.94      0.89       992
-         Sitting       0.98      0.99      0.98       992
+ArmFasterTowards       1.00      0.85      0.92       992
+ArmSlowerTowards       1.00      1.00      1.00       992
+     CirclingArm       0.99      1.00      0.99       992
+        Clapping       1.00      1.00      1.00       992
+       PickingUp       0.88      1.00      0.93       992
+         Sitting       1.00      1.00      1.00       992
          Walking       1.00      1.00      1.00       992
 
-     avg / total       0.95      0.94      0.94      6944
+       micro avg       0.98      0.98      0.98      6944
+       macro avg       0.98      0.98      0.98      6944
+    weighted avg       0.98      0.98      0.98      6944
 Confusion Matrix:
-[[725  25  78   3 161   0   0]
+[[843   0  11   0 138   0   0]
  [  0 992   0   0   0   0   0]
- [  0   1 991   0   0   0   0]
- [  0   0  56 936   0   0   0]
- [ 35   7   0   0 928  22   0]
- [ 10   0   0   0   0 982   0]
+ [  0   0 992   0   0   0   0]
+ [  0   0   0 992   0   0   0]
+ [  0   0   0   0 992   0   0]
+ [  0   0   0   0   0 992   0]
  [  0   0   0   0   0   0 992]]
 --------------------------------------------------
 Data Name: noninitialised_D
 Classification Report:
                   precision    recall  f1-score   support
 
-ArmFasterTowards       0.81      0.77      0.79       992
-ArmSlowerTowards       0.79      0.82      0.80       992
-     CirclingArm       0.79      0.74      0.76       992
-        Clapping       0.92      1.00      0.95       992
-       PickingUp       0.90      0.99      0.94       992
-         Sitting       1.00      0.90      0.95       992
-         Walking       1.00      1.00      1.00       992
+ArmFasterTowards       0.75      0.94      0.83       992
+ArmSlowerTowards       0.94      0.97      0.95       992
+     CirclingArm       0.94      0.65      0.77       992
+        Clapping       0.96      0.99      0.97       992
+       PickingUp       0.99      0.98      0.99       992
+         Sitting       1.00      0.99      1.00       992
+         Walking       0.99      1.00      0.99       992
 
-     avg / total       0.89      0.89      0.89      6944
+       micro avg       0.93      0.93      0.93      6944
+       macro avg       0.94      0.93      0.93      6944
+    weighted avg       0.94      0.93      0.93      6944
 Confusion Matrix:
-[[767 204   5   0  13   3   0]
- [  0 809 181   2   0   0   0]
- [170   2 731  89   0   0   0]
- [  0   0   3 989   0   0   0]
- [  8   5   0   0 979   0   0]
- [  0   0   2   0  96 893   1]
+[[928  60   0   0   3   1   0]
+ [  0 961  31   0   0   0   0]
+ [292   0 648  44   0   0   8]
+ [  0   0   7 985   0   0   0]
+ [ 22   0   0   0 970   0   0]
+ [  0   0   0   0   4 986   2]
  [  0   0   0   0   0   0 992]]
