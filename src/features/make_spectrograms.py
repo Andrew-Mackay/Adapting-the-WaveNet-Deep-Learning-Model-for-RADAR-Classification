@@ -54,30 +54,20 @@ def make_spectrograms(df):
 
     # made a filter remove DC component and very low frequency components
     (b, a) = butter(4, 0.01, btype="high")
-    (f1, h) = freqz(b, a, ns)
     for i in range(data_range.shape[0]):
         data_range_MTI[i, :ns] = lfilter(b, a, data_range[i, :ns], axis=0)
 
     freq = np.arange(0, ns - 1)
-    freq = freq * sampling_frequency / (2 * ns)
 
-    range_axis = (freq * 3e8 * sweep_time) / (2 * bandwidth)
     data_range_MTI = data_range_MTI[1:, :]
-    data_range = data_range[1:, :]
 
     bin_indl = 5
     bin_indu = 25
-    prf = 1/sweep_time
     time_window_length = 200
     overlap_factor = 0.95
     overlap_length = np.round(time_window_length * overlap_factor)
     pad_factor = 4
     fft_points = pad_factor * time_window_length
-    doppler_bin = prf / fft_points
-    doppler_axis = np.arange(-prf / 2, prf / 2 - doppler_bin + 1, doppler_bin)
-    whole_duration = data_range_MTI.shape[1] / prf
-    num_segments = np.floor((data_range_MTI.shape[1] - time_window_length) /
-        (np.floor(time_window_length * (1 - overlap_factor))))
 
     data_spec_MTI2 = 0
     for rbin in range(bin_indl - 1, bin_indu):
@@ -92,14 +82,13 @@ def make_spectrograms(df):
         data_MTI_temp = np.fft.fftshift(s, 1)
         data_spec_MTI2 = data_spec_MTI2 + abs(data_MTI_temp)
 
-    time_axis = np.linspace(0, whole_duration, data_spec_MTI2.shape[1])
-
     iterations = 5700  # 57 seconds
     window_size = 300  # 3 seconds
     step_size = 10  # 0.1 seconds
     spectrograms = []
-    for i in range(0, iterations, step_size):
-        data_spec_small = data_spec_MTI2[:, i:(i + window_size)]
+    for i in range(0, iterations-step_size, step_size):
+        center = int(data_spec_MTI2.shape[0]/2)
+        data_spec_small = data_spec_MTI2[(center-150):(center+150), i:(i + window_size)]
         spectrograms.append(data_spec_small)
 
     return spectrograms

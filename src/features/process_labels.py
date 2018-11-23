@@ -7,7 +7,7 @@ def find_label(movement):
     if movement == "Moving arm faster towards radar, slower away":
         return "pushing"
     if movement == "Sitting and standing":
-        return "sitting_standing"
+        return "sitting"
     if movement == "Moving arm slower towards radar, faster away":
         return "pulling"
     if movement == "Circling arm forwards":
