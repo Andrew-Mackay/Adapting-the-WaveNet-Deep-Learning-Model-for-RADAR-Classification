@@ -6,7 +6,7 @@ def plot_train_acc(history, title, save=False, path=""):
     acc = history.history['acc']
     epochs = range(1, len(acc)+1)
     plt.plot(epochs, acc)
-    plt.xticks(epochs)
+    # plt.xticks(epochs)
     plt.xlabel('Epoch')
     plt.ylabel('Train Accuracy')
     plt.title(title)
@@ -20,7 +20,7 @@ def plot_train_loss(history, title, save=False, path=""):
     loss = history.history['loss']
     epochs = range(1, len(loss)+1)
     plt.plot(epochs, loss)
-    plt.xticks(epochs)
+    # plt.xticks(epochs)
     plt.xlabel('Epoch')
     plt.ylabel('Train Loss')
     plt.title(title)
@@ -92,4 +92,30 @@ def plot_all_train_acc(histories):
     plt.xlabel('Epoch')
     plt.ylabel('Train Accuracy')
     plt.title('Model Train Accuracy')
+    plt.show()
+
+
+def test_accuracy_test_loss_vs_epoch(history, title, save=False, path=""):
+    """ Two y axis, one for test accuracy, the other for test loss """
+    test_accuracy = history.history['val_acc']
+    test_loss = history.history["val_loss"]
+    epochs = range(1, len(test_accuracy)+1)
+    fig, ax1 = plt.subplots()
+
+    color = 'tab:red'
+    ax1.set_xlabel('Epoch')
+    ax1.set_ylabel('Test Accuracy', color=color)
+    ax1.plot(epochs, test_accuracy, color=color)
+    ax1.tick_params(axis='y', labelcolor=color)
+
+    ax2 = ax1.twinx()  # instantiate a second axes that shares the same x-axis
+
+    color = 'tab:blue'
+    ax2.set_ylabel('Test Loss', color=color)  # we already handled the x-label with ax1
+    ax2.plot(epochs, test_loss, color=color)
+    ax2.tick_params(axis='y', labelcolor=color)
+    plt.title(title)
+    fig.tight_layout()  # otherwise the right y-label is slightly clipped
+    if save:
+        plt.savefig(path, format='svg', dpi=1200)
     plt.show()

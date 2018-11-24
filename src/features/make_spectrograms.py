@@ -17,7 +17,7 @@ def nearest_odd_number(x):
         return int(np.floor(x))
 
 
-def make_spectrograms(df):
+def make_spectrograms(df, window_length):
     # Grab RADAR settings from top of file
     center_frequency = float(df.iloc[0])
     sweep_time = float(df.iloc[1]) / 1000  # convert to seconds
@@ -82,11 +82,11 @@ def make_spectrograms(df):
         data_MTI_temp = np.fft.fftshift(s, 1)
         data_spec_MTI2 = data_spec_MTI2 + abs(data_MTI_temp)
 
-    iterations = 5700  # 57 seconds
-    window_size = 300  # 3 seconds
+    window_size = window_length * 100
+    iterations = data_spec_MTI2.shape[1] - window_size
     step_size = 10  # 0.1 seconds
     spectrograms = []
-    for i in range(0, iterations-step_size, step_size):
+    for i in range(0, iterations, step_size):
         center = int(data_spec_MTI2.shape[0]/2)
         data_spec_small = data_spec_MTI2[(center-150):(center+150), i:(i + window_size)]
         spectrograms.append(data_spec_small)

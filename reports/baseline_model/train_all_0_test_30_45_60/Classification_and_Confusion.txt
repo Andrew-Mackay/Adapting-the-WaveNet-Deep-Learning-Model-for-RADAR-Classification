@@ -1,0 +1,78 @@
+--------------------------------------------------
+Test set name: 30
+Accuracy: 0.68
+Loss: 4.93
+Classification Report:
+              precision    recall  f1-score   support
+
+     walking       0.76      0.99      0.86      1138
+     pushing       0.91      0.31      0.47      2276
+     sitting       0.58      1.00      0.74      1138
+     pulling       0.63      0.85      0.72      1138
+    circling       0.87      0.33      0.48      1138
+    clapping       1.00      0.68      0.81      1138
+     bending       0.50      0.93      0.65      1138
+
+   micro avg       0.68      0.68      0.68      9104
+   macro avg       0.75      0.73      0.67      9104
+weighted avg       0.77      0.68      0.65      9104
+Confusion Matrix:
+[[1129    9    0    0    0    0    0]
+ [   0  713  731  356    2    0  474]
+ [   0    0 1138    0    0    0    0]
+ [   0   64    1  965   52    0   56]
+ [   0    0    0  217  376    0  545]
+ [ 361    0    0    0    0  777    0]
+ [   0    0   77    0    0    0 1061]]
+--------------------------------------------------
+Test set name: 45
+Accuracy: 0.41
+Loss: 9.52
+Classification Report:
+              precision    recall  f1-score   support
+
+     walking       0.00      0.00      0.00         0
+     pushing       0.50      0.17      0.26      1138
+     sitting       0.53      0.97      0.68      1138
+     pulling       0.46      0.16      0.23      1138
+    circling       0.00      0.00      0.00      1138
+    clapping       1.00      0.43      0.60      1138
+     bending       0.33      0.71      0.45      1138
+
+   micro avg       0.41      0.41      0.41      6828
+   macro avg       0.40      0.35      0.32      6828
+weighted avg       0.47      0.41      0.37      6828
+Confusion Matrix:
+[[   0    0    0    0    0    0    0]
+ [   0  195  596  206    0    0  141]
+ [   0   37 1100    1    0    0    0]
+ [   0  157   60  179  374    0  368]
+ [   0    0    2    0    0    0 1136]
+ [ 568    0    0    0   84  486    0]
+ [   0    0  326    0    0    0  812]]
+--------------------------------------------------
+Test set name: 60
+Accuracy: 0.33
+Loss: 8.94
+Classification Report:
+              precision    recall  f1-score   support
+
+     walking       0.55      0.43      0.48      1138
+     pushing       0.30      0.17      0.22      2276
+     sitting       0.36      0.79      0.50      1138
+     pulling       0.11      0.02      0.04      1138
+    circling       0.00      0.00      0.00      1138
+    clapping       0.99      0.64      0.78      1138
+     bending       0.15      0.43      0.23      1138
+
+   micro avg       0.33      0.33      0.33      9104
+   macro avg       0.35      0.36      0.32      9104
+weighted avg       0.34      0.33      0.31      9104
+Confusion Matrix:
+[[ 489   66  164   77  204    8  130]
+ [   0  393  327  150   19    0 1387]
+ [   0  238  895    5    0    0    0]
+ [   0  417   98   28   36    0  559]
+ [   0  200  335    0    0    0  603]
+ [ 407    0    0    0    0  731    0]
+ [   0   12  637    0    0    0  489]]

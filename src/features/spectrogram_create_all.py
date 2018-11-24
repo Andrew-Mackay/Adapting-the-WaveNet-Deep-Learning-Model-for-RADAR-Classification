@@ -7,8 +7,10 @@ matplotlib.use('Agg')
 # In[9]:
 
 
-WINDOW_LENGTH = 3
-
+# WINDOW_LENGTH = 3
+WINDOW_LENGTH = 2
+# WINDOW_LENGTH = 1.5
+# WINDOW_LENGTH = 1
 
 # In[10]:
 
@@ -54,7 +56,7 @@ import time
 
 
 df_labels = pd.read_csv(RAW_PATH + 'Labels.csv')
-df_labels.rename(columns={'dataset ID':'dataset_id'}, inplace=True)
+df_labels.rename(columns={'dataset ID': 'dataset_id'}, inplace=True)
 
 
 # In[14]:
@@ -85,7 +87,7 @@ for row in df_labels.itertuples():
         INTERIM_PATH, WINDOW_LENGTH, row.user_label, row.aspect_angle, row.label)
     
     radar_df = pd.read_table(file_name, sep="\n", header=None)
-    spectrograms = make_spectrograms.make_spectrograms(radar_df)
+    spectrograms = make_spectrograms.make_spectrograms(radar_df, WINDOW_LENGTH)
     np.save(file_path + "/" + str(current_row) + "_numpy_spectrogram.npy", spectrograms)  # save matrix version of spectrograms
     count = 1
     for spectrogram in spectrograms:

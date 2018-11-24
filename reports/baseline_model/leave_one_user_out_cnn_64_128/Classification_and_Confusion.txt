@@ -1,0 +1,24 @@
+--------------------------------------------------
+Model Name: Test on A
+Classification Report:
+              precision    recall  f1-score   support
+
+     walking       1.00      1.00      1.00      1138
+     pushing       0.98      1.00      0.99      1138
+     sitting       1.00      0.98      0.99      1138
+     pulling       0.99      1.00      0.99      1138
+    circling       1.00      0.99      1.00      1138
+    clapping       1.00      1.00      1.00      1138
+     bending       1.00      0.99      1.00      1138
+
+   micro avg       1.00      1.00      1.00      7966
+   macro avg       1.00      1.00      1.00      7966
+weighted avg       1.00      1.00      1.00      7966
+Confusion Matrix:
+[[1138    0    0    0    0    0    0]
+ [   0 1138    0    0    0    0    0]
+ [   0   19 1117    2    0    0    0]
+ [   0    0    0 1138    0    0    0]
+ [   0    0    0   10 1128    0    0]
+ [   0    0    0    0    0 1138    0]
+ [   0    6    0    0    0    0 1132]]

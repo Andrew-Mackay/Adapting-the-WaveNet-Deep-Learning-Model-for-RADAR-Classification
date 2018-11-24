@@ -8,7 +8,7 @@ def plot_multiple_val_acc(histories, title, save=False, path=""):
         epochs = range(1, len(val_acc)+1)
         plt.plot(epochs, val_acc, label=name)
 
-    plt.xticks(epochs)
+    # plt.xticks(epochs)
     plt.legend()
     plt.xlabel('Epoch')
     plt.ylabel('Test Accuracy')
