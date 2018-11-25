@@ -7,8 +7,8 @@ matplotlib.use('Agg')
 # In[9]:
 
 
-# WINDOW_LENGTH = 3
-WINDOW_LENGTH = 2
+WINDOW_LENGTH = 3
+# WINDOW_LENGTH = 2
 # WINDOW_LENGTH = 1.5
 # WINDOW_LENGTH = 1
 
@@ -96,7 +96,7 @@ for row in df_labels.itertuples():
         ax = plt.Axes(fig, [0., 0., 1., 1.])
         ax.set_axis_off()
         fig.add_axes(ax)
-        ax.imshow(20 * np.log10(abs(spectrogram)), cmap='jet', norm=norm)
+        ax.imshow(20 * np.log10(abs(spectrogram)), cmap='jet', norm=norm, aspect="auto")
         fig.savefig(file_path + "/" + str(current_row) + "_" + str(count)+".png", dpi=1)
         plt.close(fig)
         count += 1
