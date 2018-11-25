@@ -16,6 +16,7 @@ WINDOW_LENGTH = 3
 
 
 import os
+
 if os.getcwd() == '/content':
     from google.colab import drive
     drive.mount('/content/gdrive')
@@ -23,8 +24,8 @@ if os.getcwd() == '/content':
     get_ipython().system('cd gdrive/My\\ Drive/Level-4-Project/ && pip install --editable .')
     os.chdir('gdrive/My Drive/Level-4-Project/')
     
-elif os.getcwd() == 'C:\\Users\\macka\\Google Drive\\Level-4-Project\\notebooks\\data_processing' or os.getcwd() == 'C:\\Users\\macka\\Google Drive\\Level-4-Project\\src\\features':
-    BASE_PATH = "C:/Users/macka/Google Drive/Level-4-Project/"
+elif os.getcwd() == 'D:\\Google Drive\\Level-4-Project\\notebooks\\data_processing' or os.getcwd() == 'D:\\Google Drive\\Level-4-Project\\src\\features':
+    BASE_PATH = "D:/Google Drive/Level-4-Project/"
     
 else:
     BASE_PATH = "/export/home/2192793m/Level-4-Project/"
