@@ -7,10 +7,10 @@ matplotlib.use('Agg')
 # In[9]:
 
 
-WINDOW_LENGTH = 3
+# WINDOW_LENGTH = 3
 # WINDOW_LENGTH = 2
 # WINDOW_LENGTH = 1.5
-# WINDOW_LENGTH = 1
+WINDOW_LENGTH = 1
 
 # In[10]:
 
@@ -33,6 +33,7 @@ else:
 DATA_PATH = BASE_PATH + 'data/'
 RAW_PATH = DATA_PATH + 'raw/'
 INTERIM_PATH = DATA_PATH + 'interim/'
+INTERIM_PATH = "D:/interim/" # interim data moved
 
 
 # In[11]:

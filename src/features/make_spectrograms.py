@@ -82,7 +82,7 @@ def make_spectrograms(df, window_length):
         data_MTI_temp = np.fft.fftshift(s, 1)
         data_spec_MTI2 = data_spec_MTI2 + abs(data_MTI_temp)
 
-    window_size = window_length * 100
+    window_size = int(window_length * 100)
     iterations = data_spec_MTI2.shape[1] - window_size
     step_size = 10  # 0.1 seconds
     spectrograms = []
