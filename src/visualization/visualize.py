@@ -3,7 +3,9 @@ import matplotlib.pyplot as plt
 
 def plot_train_acc(history, title, save=False, path=""):
     """Plot the training accuracy over epochs"""
-    acc = history.history['acc']
+    if type(history) is not dict:
+        history = history.history
+    acc = history['acc']
     epochs = range(1, len(acc)+1)
     plt.plot(epochs, acc)
     # plt.xticks(epochs)
@@ -17,7 +19,9 @@ def plot_train_acc(history, title, save=False, path=""):
 
 def plot_train_loss(history, title, save=False, path=""):
     """Plot the training loss over epochs"""
-    loss = history.history['loss']
+    if type(history) is not dict:
+        history = history.history
+    loss = history['loss']
     epochs = range(1, len(loss)+1)
     plt.plot(epochs, loss)
     # plt.xticks(epochs)
@@ -51,8 +55,10 @@ def visualize(history):
 
 def plot_train_test_loss(history):
     # Get training and test loss histories
-    training_loss = history.history['loss']
-    test_loss = history.history['val_loss']
+    if type(history) is not dict:
+        history = history.history
+    training_loss = history['loss']
+    test_loss = history['val_loss']
 
     # Create count of the number of epochs
     epoch_count = range(1, len(training_loss) + 1)
@@ -69,8 +75,10 @@ def plot_train_test_loss(history):
 
 def plot_train_test_acc(history):
     # Get training and test loss histories
-    training_acc = history.history['acc']
-    test_acc = history.history['val_acc']
+    if type(history) is not dict:
+        history = history.history
+    training_acc = history['acc']
+    test_acc = history['val_acc']
 
     # Create count of the number of epochs
     epoch_count = range(1, len(training_acc) + 1)
@@ -87,7 +95,9 @@ def plot_train_test_acc(history):
 
 def plot_all_train_acc(histories):
     for key, value in histories.items():
-        plt.plot(value.history['acc'])
+        if type(value) is not dict:
+            value = value.history
+        plt.plot(value['acc'])
     plt.legend(histories.keys())
     plt.xlabel('Epoch')
     plt.ylabel('Train Accuracy')
@@ -97,8 +107,10 @@ def plot_all_train_acc(histories):
 
 def test_accuracy_test_loss_vs_epoch(history, title, save=False, path=""):
     """ Two y axis, one for test accuracy, the other for test loss """
-    test_accuracy = history.history['val_acc']
-    test_loss = history.history["val_loss"]
+    if type(history) is not dict:
+        history = history.history
+    test_accuracy = history['val_acc']
+    test_loss = history["val_loss"]
     epochs = range(1, len(test_accuracy)+1)
     fig, ax1 = plt.subplots()
 

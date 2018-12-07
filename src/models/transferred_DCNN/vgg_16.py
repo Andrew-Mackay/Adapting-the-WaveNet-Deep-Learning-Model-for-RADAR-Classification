@@ -15,6 +15,6 @@ def make_model(img_rows, img_cols, nb_classes):
     # x = Dense(512, activation="relu")(x)
     x = Dense(1024, activation="relu")(x)
     predictions = Dense(nb_classes, activation="softmax")(x)
-    model = Model(input=model.input, output = predictions)
+    model = Model(inputs=model.inputs, outputs=predictions)
 
     return model
