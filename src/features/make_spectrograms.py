@@ -92,3 +92,76 @@ def make_spectrograms(df, window_length):
         spectrograms.append(data_spec_small)
 
     return spectrograms
+
+
+def make_spectrograms_v2(df, window_length):
+    # Grab RADAR settings from top of file
+    center_frequency = float(df.iloc[1])
+    sweep_time = float(df.iloc[2]) / 1000  # convert to seconds
+    number_of_time_samples = float(df.iloc[3])
+    bandwidth = float(df.iloc[4])
+    sampling_frequency = number_of_time_samples / sweep_time
+    record_length = 60
+    number_of_chirps = record_length / sweep_time
+
+    # Put data values into an array
+    data = df.iloc[5:].apply(complex).values
+
+    # Reshape into chirps over time
+    data_time = np.reshape(data, (int(number_of_chirps), int(number_of_time_samples)))
+    data_time = np.rot90(data_time, k=-1)
+
+
+    win = np.ones((int(number_of_time_samples), data_time.shape[1]))
+    # Apply fast fourier transform
+    fft_applied = np.fft.fft((data_time * win), axis=0)
+
+    # take relevant half
+    data_range = fft_applied[:int(number_of_time_samples / 2), :]
+
+
+    # IIR Notch filter
+    x = data_range.shape[1]
+    ns = nearest_odd_number(x) - 1
+
+    data_range_MTI = np.zeros((data_range.shape[0], ns), dtype=np.complex128)
+
+    # made a filter remove DC component and very low frequency components
+    (b, a) = butter(4, 0.01, btype="high")
+    for i in range(data_range.shape[0]):
+        data_range_MTI[i, :ns] = lfilter(b, a, data_range[i, :ns], axis=0)
+
+    # Remove first range bin as has strong residual possibly from filtering?
+    data_range_MTI = data_range_MTI[1:, :]
+
+    bin_indl = 5
+    bin_indu = 25
+    time_window_length = 200
+    overlap_factor = 0.95
+    overlap_length = np.round(time_window_length * overlap_factor)
+    pad_factor = 4
+    fft_points = pad_factor * time_window_length
+
+    data_spec_MTI2 = 0
+    for rbin in range(bin_indl - 1, bin_indu):
+        s, f, t = mlab.specgram(data_range_MTI[rbin, :],
+                                Fs=1,
+                                window=np.hamming(time_window_length),
+                                noverlap=overlap_length,
+                                NFFT=time_window_length,
+                                mode='complex',
+                                pad_to=fft_points)
+
+        data_MTI_temp = np.fft.fftshift(s, 1)
+        data_spec_MTI2 = data_spec_MTI2 + abs(data_MTI_temp)
+
+    window_size = int(window_length * 100)
+    iterations = data_spec_MTI2.shape[1] - window_size
+    step_size = 10  # 0.1 seconds
+    spectrograms = []
+    for i in range(0, iterations, step_size):
+        center = int(data_spec_MTI2.shape[0]/2)
+        data_spec_small = data_spec_MTI2[(center-150):(center+150), i:(i + window_size)]
+        spectrograms.append(data_spec_small)
+
+    return spectrograms
