@@ -93,3 +93,4 @@ target/
 /ReproducingPreviousWork/**/*.meta
 *.pkl
 *.h5
+*.ini
