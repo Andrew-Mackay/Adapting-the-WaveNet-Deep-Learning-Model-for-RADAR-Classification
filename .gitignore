@@ -94,3 +94,8 @@ target/
 *.pkl
 *.h5
 *.ini
+/models/wavenet/raw_reshaped/test_1/
+/models/wavenet/raw_reshaped/test_2/
+/models/wavenet/raw_reshaped/test_3/
+/models/wavenet/range_fft/
+
