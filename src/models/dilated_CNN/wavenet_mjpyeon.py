@@ -8,6 +8,7 @@ import tensorflow as tf
 
 
 # from https://github.com/mjpyeon/wavenet-classifier
+# likely built from https://github.com/basveeling/wavenet
 class WaveNetClassifier:
     def __init__(self, input_shape, output_shape, kernel_size=2, dilation_depth=9, n_filters=40, pool_size_1=80,
                  pool_size_2=100, load=False, load_dir='./'):
