@@ -98,4 +98,5 @@ target/
 /models/wavenet/raw_reshaped/test_2/
 /models/wavenet/raw_reshaped/test_3/
 /models/wavenet/range_fft/
-
+/models/wavenet/
+/results/wavenet/
