@@ -91,7 +91,8 @@ target/
 /ReproducingPreviousWork/**/results
 /ReproducingPreviousWork/**/*.py*
 /ReproducingPreviousWork/**/*.meta
-*.pkl
+results/baseline_model/
+results/transferred_DCNN/
 *.h5
 *.ini
 /models/wavenet/raw_reshaped/test_1/
