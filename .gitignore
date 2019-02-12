@@ -101,3 +101,4 @@ results/transferred_DCNN/
 /models/wavenet/range_fft/
 /models/wavenet/
 /results/wavenet/
+/models/range_data_model_initial_testing/*
