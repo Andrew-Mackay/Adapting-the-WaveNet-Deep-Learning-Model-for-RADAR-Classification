@@ -75,7 +75,6 @@ target/
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
 /*/.ipynb_checkpoints
-/ReproducingPreviousWork/**/ipynb_checkpoints
 
 # exclude data from source control by default
 /data/
@@ -83,22 +82,5 @@ target/
 # Mac OS-specific storage files
 .DS_Store
 
-# Temporary until decide what to track
-#ReproducingPreviousWork
-/ReproducingPreviousWork/**/data_batch*
-/ReproducingPreviousWork/**/test_batch*
-/ReproducingPreviousWork/**/*.rar
-/ReproducingPreviousWork/**/results
-/ReproducingPreviousWork/**/*.py*
-/ReproducingPreviousWork/**/*.meta
-results/baseline_model/
-results/transferred_DCNN/
 *.h5
 *.ini
-/models/wavenet/raw_reshaped/test_1/
-/models/wavenet/raw_reshaped/test_2/
-/models/wavenet/raw_reshaped/test_3/
-/models/wavenet/range_fft/
-/models/wavenet/
-/results/wavenet/
-/models/range_data_model_initial_testing/*
