@@ -11,6 +11,8 @@ Adapting the WaveNet Deep Learning Model for RADAR Classification
   Level 4 Honours project at the University of Glasgow by Andrew Mackay.
   The project was supervised by Professor Roderick Murray-Smith.
 
+---
+
 Project Setup
 ------------
 Due to the large size of the dataset used for this project (total folder size >300GB) the data has not been included. To download the data, please use the link in the file "gdrive_data_link.env".
@@ -22,31 +24,58 @@ As many of the experiments conducted take a very long time to execute, the resul
 
 If you intend not to use the Google Colaboratory environment you will need to install all the required python packages. It is recommended to handle this using the [Conda](https://conda.io/en/latest/) environment management software. To install the requirements using Conda, the command ```conda env create -f environment.yml```. The requirements have also been stored in the file "requirements.txt" and can be installed using [pip](https://pypi.org/project/pip/) with the command ```pip install -r requirements.txt```. This investigation has been conducted using Python versions >= 3.6.6 however the code may be compatible with older versions.
 
+---
+
 Notebook Guide
 ------------
 ### 01_dataset_composition_analysis.ipynb
+This notebook explores the composition of the dataset to get a better understanding of the number of measurements and identify potential class imbalances.
 
 ### 02_interim_dataset_creation_convert_i_to_j.ipynb
-### 03_data_processing_demonstration.ipynb
-### 04_interim_dataset_creation_convert_i_to_j.ipynb
-### 05_processed_dataset_creation_doppler_spectrogram.ipynb
-### 05_processed_dataset_creation_doppler_spectrogram_without_corrupt.ipynb
-### 06_processed_dataset_creation_range_FFT.ipynb
-### 07_CNN_model_comparison.ipynb
-### 08_CNN_hyperparameter_search.ipynb
-### 09_CNN_model_early_stopping_tuning.ipynb
-### 10_CNN_final_model_evaluation.ipynb
-### 10_CNN_final_model_evaluation_without_corrupt.ipynb
-### 11_range_data_model_initial_testing.ipynb
-### 12_range_data_model_further_experimentation.ipynb
-### 13_range_data_model_causal_vs_non_causal.ipynb
-### 14_range_data_model_regularization_investigation.ipynb
-### 15_range_data_model_hyperparameter_search.ipynb
-### 16_range_data_model_final_model_comparison.ipynb
-### 16_range_data_model_final_model_comparison_without_corrupt.ipynb
-### 17_final_evaluation_comparison.ipynb
-------
+The raw RADAR data is represented as complex numbers. As it uses the mathematical convention of i to represent the imaginary component this is not compatible with python which uses the engineering convention of j. This notebook replaces the i with j for each data file.
 
+### 03_data_processing_demonstration.ipynb
+Demonstration of the stages of processing applied to the radar data.
+
+### 04_interim_dataset_creation_doppler_spectrogram.ipynb
+Using the same processing as demonstrated in "03_data_processing_demonstration.ipynb", create the micro-Doppler signature images from the raw data.
+
+### 05_processed_dataset_creation_doppler_spectrogram.ipynb
+Creates the final datasets for the CNN model from the micro-Doppler spectrogram images. This notebook uses all the data from all the subjects.
+
+### 05_processed_dataset_creation_doppler_spectrogram_without_corrupt.ipynb
+Creates the final datasets for the CNN model from the micro-Doppler spectrogram images. This notebook excludes the corrupt data from the end of subject F's recordings.
+
+### 06_processed_dataset_creation_range_FFT.ipynb
+Creates the range profiles dataset. To handle the large size of data, this method saves each array as a seperate file and uses a key to store the labels and file name. Intended to be used later with a Data Generator.
+
+### 07_CNN_model_comparison.ipynb
+
+### 08_CNN_hyperparameter_search.ipynb
+
+### 09_CNN_model_early_stopping_tuning.ipynb
+
+### 10_CNN_final_model_evaluation.ipynb
+
+### 10_CNN_final_model_evaluation_without_corrupt.ipynb
+
+### 11_range_data_model_initial_testing.ipynb
+
+### 12_range_data_model_further_experimentation.ipynb
+
+### 13_range_data_model_causal_vs_non_causal.ipynb
+
+### 14_range_data_model_regularization_investigation.ipynb
+
+### 15_range_data_model_hyperparameter_search.ipynb
+
+### 16_range_data_model_final_model_comparison.ipynb
+
+### 16_range_data_model_final_model_comparison_without_corrupt.ipynb
+
+### 17_final_evaluation_comparison.ipynb
+
+---
 Project Organization
 ------------
 
