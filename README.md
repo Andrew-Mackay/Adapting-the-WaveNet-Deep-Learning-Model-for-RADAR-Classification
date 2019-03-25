@@ -1,7 +1,14 @@
 Adapting the WaveNet Deep Learning Model for RADAR Classification
 ==============================
 
-  Deep learning applied to radar classification, supervised by Prof Roderick Murray-Smith.
+  Inestigation into radar classification. This projects adapts the WaveNet deep learning model
+  to classify radar data by the range profiles representation. This is compared with the leading 
+  approach of creating micro-Doppler spectrogram images and classifying these images with a
+  CNN.
+
+  Level 4 Honours project at the University of Glasgow by Andrew Mackay.
+  Project supervised by Professor Roderick Murray-Smith.
+  
 
 Project Organization
 ------------
@@ -16,9 +23,9 @@ Project Organization
     │   ├── processed      <- The final, canonical data sets for modeling.
     |   |   ├── doppler_spectrograms                   <- Doppler spectorgrams dataset with all subjects data
     |   |   ├── doppler_spectrograms_without_corrupt   <- Doppler spectorgrams dataset with corrupt data from subject F removed
-    |   |   └── range_FFT   <- range profile datasets 
+    |   |   └── range_FFT                              <- range profile datasets 
     |   |       └── 3  
-    |   |           ├── MTI_applied  <- range profile dataset with MTI filter (unused)    
+    |   |           ├── MTI_applied       <- range profile dataset with MTI filter (unused)    
     |   |           └── MTI_not_applied   <- range profiles dataset  
     |   |                     
     │   └── raw            <- The original, immutable data dump.
@@ -28,8 +35,8 @@ Project Organization
     |       └── raw_converted            <- raw data with 'i' replaced with 'j' for complex representation
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    ├── environment.yml    <- 
-    ├── gdrive_data_link.env   <- 
+    ├── environment.yml    <- Anaconda enviroment file
+    ├── gdrive_data_link.env   <- Google Drive link to the data
     ├── notebooks          <- Jupyter notebooks.
     │   ├── 01_dataset_composition_analysis.ipynb
     │   ├── 02_interim_dataset_creation_convert_i_to_j.ipynb
@@ -52,7 +59,7 @@ Project Organization
     │   ├── 16_range_data_model_final_model_comparison_without_corrupt.ipynb
     │   └── 17_final_evaluation_comparison.ipynb
     │
-    ├── results   <-  
+    ├── results            <- Results from the investigation including graphs  
     │   ├── dataset_composition_analysis
     │   ├── data_processing_demonstration
     │   ├── CNN_model_comparison

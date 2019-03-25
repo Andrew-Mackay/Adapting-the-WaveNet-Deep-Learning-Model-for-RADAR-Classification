@@ -84,3 +84,4 @@ target/
 
 *.h5
 *.ini
+*.env
