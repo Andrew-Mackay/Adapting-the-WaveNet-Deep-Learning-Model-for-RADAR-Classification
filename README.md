@@ -6,17 +6,26 @@ Adapting the WaveNet Deep Learning Model for RADAR Classification
 Project Organization
 ------------
 
-    ├── LICENSE
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
+    ├── LICENSE            <- MIT License
+    ├── README.md          <- README 
+    ├── data    
     │   ├── interim        <- Intermediate data that has been transformed.
-    │   │   └── doppler_spectrograms
+    │   │   ├── *.dat                 <- raw data with 'i' replaced with 'j' for complex representation
+    │   │   └── doppler_spectrograms  <- Processed Doppler Spectrogram images
+    |   |
     │   ├── processed      <- The final, canonical data sets for modeling.
-    |   |   ├── doppler_spectrograms
-    |   |   ├── doppler_spectrograms_without_corrupt
-    |   |   └── range_FFT
+    |   |   ├── doppler_spectrograms                   <- Doppler spectorgrams dataset with all subjects data
+    |   |   ├── doppler_spectrograms_without_corrupt   <- Doppler spectorgrams dataset with corrupt data from subject F removed
+    |   |   └── range_FFT   <- range profile datasets 
+    |   |       └── 3  
+    |   |           ├── MTI_applied  <- range profile dataset with MTI filter (unused)    
+    |   |           └── MTI_not_applied   <- range profiles dataset  
+    |   |                     
     │   └── raw            <- The original, immutable data dump.
-    |       └── raw_converted
+    |       ├── *.dat                    <- Raw radar data files
+    |       ├── Experiment\ notes.xlsx   <- Experimental notes by A. Angelov
+    |       ├── Labels.csv               <- Condensed representation of Experiment\ notes.xlsx
+    |       └── raw_converted            <- raw data with 'i' replaced with 'j' for complex representation
     │
     ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     ├── environment.yml    <- 
