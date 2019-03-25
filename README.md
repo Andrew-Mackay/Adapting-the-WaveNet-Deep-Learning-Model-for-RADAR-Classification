@@ -15,7 +15,37 @@ Project Setup
 ------------
 Due to the large size of the dataset used for this project (total folder size >300GB) the data has not been included. To download the data, please use the link in the file "gdrive_data_link.env".
 
-All experiments were created in the jupyter notebook format ([jupyter.org](https://jupyter.org/)) and are stored in the notebooks folder.
+All experiments were created in the [Jupyter Notebook](https://jupyter.org/) format  and are stored in the 'notebooks' folder. Many IDEs have built in support
+for these files however I would recommend using either [Jupyter Notebook](https://jupyter.org/install) or [Google Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb). As Google Colaboratory works in the cloud you will not have to install any additional software to your device and the environment it provides all but one of the nessessary Python packages pre-installed. The one package it does not come with is [Scikit-Optimize](https://scikit-optimize.github.io/) however this is installed within the notebooks using a cell containing: ```! pip install git+https://github.com/scikit-optimize/scikit-optimize/ ``` (this will need to be uncommented out).
+
+As many of the experiments conducted take a very long time to execute, the results from previous executions have been saved in the 'results' folder as .pkl files. In the notebooks, these results are then loaded back in to allow graphical visualization of the results. If you want to re-run the experiments, in each notebook there will be one or two boolean variables that must be set to true to allow overwriting of the results. These variables are often called either "OVERWRITE_RESULTS" or "SAVE_RESULTS".
+
+If you intend not to use the Google Colaboratory environment you will need to install all the required python packages. It is recommended to handle this using the [Conda](https://conda.io/en/latest/) environment management software. To install the requirements using Conda, the command ```conda env create -f environment.yml```. The requirements have also been stored in the file "requirements.txt" and can be installed using [pip](https://pypi.org/project/pip/) with the command ```pip install -r requirements.txt```. This investigation has been conducted using Python versions >= 3.6.6 however the code may be compatible with older versions.
+
+Notebook Guide
+------------
+### 01_dataset_composition_analysis.ipynb
+
+### 02_interim_dataset_creation_convert_i_to_j.ipynb
+### 03_data_processing_demonstration.ipynb
+### 04_interim_dataset_creation_convert_i_to_j.ipynb
+### 05_processed_dataset_creation_doppler_spectrogram.ipynb
+### 05_processed_dataset_creation_doppler_spectrogram_without_corrupt.ipynb
+### 06_processed_dataset_creation_range_FFT.ipynb
+### 07_CNN_model_comparison.ipynb
+### 08_CNN_hyperparameter_search.ipynb
+### 09_CNN_model_early_stopping_tuning.ipynb
+### 10_CNN_final_model_evaluation.ipynb
+### 10_CNN_final_model_evaluation_without_corrupt.ipynb
+### 11_range_data_model_initial_testing.ipynb
+### 12_range_data_model_further_experimentation.ipynb
+### 13_range_data_model_causal_vs_non_causal.ipynb
+### 14_range_data_model_regularization_investigation.ipynb
+### 15_range_data_model_hyperparameter_search.ipynb
+### 16_range_data_model_final_model_comparison.ipynb
+### 16_range_data_model_final_model_comparison_without_corrupt.ipynb
+### 17_final_evaluation_comparison.ipynb
+------
 
 Project Organization
 ------------
@@ -41,7 +71,6 @@ Project Organization
     |       ├── Labels.csv               <- Condensed representation of Experiment\ notes.xlsx
     |       └── raw_converted            <- raw data with 'i' replaced with 'j' for complex representation
     │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
     ├── environment.yml    <- Anaconda enviroment file
     ├── gdrive_data_link.env   <- Google Drive link to the data
     ├── notebooks          <- Jupyter notebooks.
