@@ -1,14 +1,21 @@
 Adapting the WaveNet Deep Learning Model for RADAR Classification
 ==============================
 
-  Inestigation into radar classification. This projects adapts the WaveNet deep learning model
-  to classify radar data by the range profiles representation. This is compared with the leading 
-  approach of creating micro-Doppler spectrogram images and classifying these images with a
+  An inestigation into radar classification. This projects adapts the WaveNet deep learning model
+  to classify radar data directly from the range profiles representation. This technique is compared with the leading 
+  approach in the literature of creating micro-Doppler spectrogram images from the data and classifying these images using a
   CNN.
 
+  This project builds on work conducted by A. Angelov who collected the dataset, developed the orignal code for processing the data and created the CNN that was applied to the micro-Doppler signatures.
+
   Level 4 Honours project at the University of Glasgow by Andrew Mackay.
-  Project supervised by Professor Roderick Murray-Smith.
-  
+  The project was supervised by Professor Roderick Murray-Smith.
+
+Project Setup
+------------
+Due to the large size of the dataset used for this project (total folder size >300GB) the data has not been included. To download the data, please use the link in the file "gdrive_data_link.env".
+
+All experiments were created in the jupyter notebook format ([jupyter.org](https://jupyter.org/)) and are stored in the notebooks folder.
 
 Project Organization
 ------------
