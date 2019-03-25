@@ -50,14 +50,19 @@ Creates the final datasets for the CNN model from the micro-Doppler spectrogram 
 Creates the range profiles dataset. To handle the large size of data, this method saves each array as a seperate file and uses a key to store the labels and file name. Intended to be used later with a Data Generator.
 
 ### 07_CNN_model_comparison.ipynb
+Investigation into the effect of various filter combinations for the CNN model. To compare the different filter values, five-fold cross-validation was used. For each fold, one subject of the five total subjects (subject C being reserved for final evaluation) was withheld for evaluation whilst the model was trained on the remaining four subjects.
 
 ### 08_CNN_hyperparameter_search.ipynb
+Performs a search over the hyperparameter space for the CNN model to try and find a more optimal parameter configuration.
 
 ### 09_CNN_model_early_stopping_tuning.ipynb
+Investigation into the effect of early stopping on the CNN model.
 
 ### 10_CNN_final_model_evaluation.ipynb
+Final evalaution of the CNN model. This notebook uses all data from all subjects for the evaluation.
 
 ### 10_CNN_final_model_evaluation_without_corrupt.ipynb
+Final evalaution of the CNN model. This notebook excludes the corrupt data from subject F.
 
 ### 11_range_data_model_initial_testing.ipynb
 

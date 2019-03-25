@@ -83,7 +83,6 @@ six==1.11.0
 snowballstemmer==1.2.1
 Sphinx==1.8.1
 sphinxcontrib-websupport==1.1.0
--e git+git@github.com:Andrew-Mackay/Level-4-Project.git@7a7f42cb92c6645d044b486c849cb65fdfd825f6#egg=src
 tensorboard==1.10.0
 tensorflow==1.10.0
 termcolor==1.1.0
